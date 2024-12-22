@@ -1,1 +1,17 @@
 
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+     int k;
+    
+  
+        for(int i=0;i<nums.size();i++)
+        {
+              k=count(nums.begin(),nums.end(),nums[i]);
+            if(k==1)
+            return nums[i];
+
+        }
+        return 0;
+    }
+};
