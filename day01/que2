@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int minimumOperations(vector<int>& nums) {
+        int r,count=0;
+        for(int i=0;i<nums.size();i++)
+        {
+            r=nums[i]%3;
+            if(r==1)
+            {
+                count++;
+            }
+            if(r==2)
+            {
+                count=count+1;
+            }
+        }
+        return count;
+    }
+};
