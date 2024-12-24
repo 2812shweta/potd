@@ -1,0 +1,15 @@
+class Solution {
+public:
+    bool checkIfPangram(string sentence) {
+        set<char>str;
+        for(char c : sentence)
+        {
+            str.insert(tolower(c));
+        }
+        if(str.size()==26)
+      {  
+        return true;
+        }
+        return false;
+    }
+};
