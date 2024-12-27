@@ -1,0 +1,23 @@
+class Solution {
+public:
+    bool isHappy(int n) {
+        if (n == 1)
+            return true;
+        int rem;
+        long sum = 0;
+        while (n != 0) {
+            rem = n % 10;
+            sum = sum + rem*rem;
+            n/=10;
+            if (n == 0) {
+                n = sum;
+                if (sum == 1 || sum==7) // 1111111 yaha fail kr rha tha so i did that particular case sum=7
+                    return true;
+                if (sum < 10)
+                    return false;
+                sum = 0;
+            }
+        }
+        return false;
+    }
+};
